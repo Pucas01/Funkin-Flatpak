@@ -74,7 +74,7 @@
                 },
                  {
                     "type": "dir",
-                    "path": "/your/path/here/"
+                    "path": "~/work/FunkinFlatpak/FunkinFlatpak/FunkinFlatpak/Build-JSON/"
                 },
                 {
                     "type": "file",
