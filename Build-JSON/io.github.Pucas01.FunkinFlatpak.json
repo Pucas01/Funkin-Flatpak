@@ -69,13 +69,11 @@
             ],
             "sources": [
                 {
-                //Please set the latest github release under URL and the hash under well sha256
                     "type": "archive",
                     "url": "https://github.com/Pucas01/FunkinFlatpak/archive/refs/tags/LATESTRELEASE",
                     "sha256":"SETHASHHERE"
                 },
                  {
-                 //Please provide your own game files, the file structure should be FunkinSource/Funking-0.6.4/gamefiles
                     "type": "dir",
                     "path": "/your/path/here/FunkinBuilder/FunkinSourceFiles"
                 },
