@@ -1,0 +1,30 @@
+name: Build FunkinFlatpak
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y flatpak flatpak-builder git
+
+      - name: Clone FunkinFlatpak repo
+        run: |
+          git clone https://github.com/Twig6943/FunkinFlatpak.git
+
+      - name: Build Flatpak
+        run: |
+          cd FunkinFlatpak/Build-JSON
+          flatpak-builder --install-deps-from=flathub --force-clean --repo=.repo .build-dir io.github.Pucas01.FunkinFlatpak.json
+          flatpak build-bundle .repo funkin.flatpak io.github.Pucas01.FunkinFlatpak --runtime-repo=https://flathub.org/repo/flathub.flatpakrepo
+
+      - name: Upload Flatpak as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: funkin.flatpak
+          path: FunkinFlatpak/Build-JSON/funkin.flatpak
