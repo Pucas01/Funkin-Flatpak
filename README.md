@@ -1,1 +1,1 @@
-Please Refere to the main branch for install instructions and more informatio
+Please Refere to the main branch for installation instructions and more information
