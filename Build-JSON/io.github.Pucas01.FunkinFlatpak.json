@@ -1,0 +1,106 @@
+{
+    "id": "io.github.Pucas01.FunkinFlatpak",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "24.08",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "Funkin",
+    "modules": [
+        {
+            "name": "ffmpeg",
+            "config-opts": [
+                "--enable-pic",
+                "--enable-shared",
+                "--disable-doc",
+                "--disable-static",
+                "--enable-gpl",
+                "--enable-libvpx",
+                "--enable-libmp3lame",
+                "--enable-libvorbis",
+                "--enable-libopus"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ffmpeg.org/releases/ffmpeg-4.4.5.tar.xz",
+                    "sha256": "f9514e0d3515aee5a271283df71636e1d1ff7274b15853bcd84e144be416ab07"
+                }
+            ]
+        },
+        {
+            "name": "libvlc",
+            "config-opts": [
+                "BUILDCC=gcc",
+                "--disable-lua",
+                "--disable-a52",
+                "--disable-qt",
+                "--disable-ncurses",
+                "--disable-udev"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://get.videolan.org/vlc/3.0.21/vlc-3.0.21.tar.xz",
+                    "sha256": "24dbbe1d7dfaeea0994d5def0bbde200177347136dbfe573f5b6a4cee25afbb0",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 6504,
+                        "stable-only": true,
+                        "url-template": "https://get.videolan.org/vlc/$version/vlc-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "funkin",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p ${FLATPAK_DEST}/bin",
+                "mkdir -p ${FLATPAK_DEST}/share/applications",
+                "mkdir -p ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps",
+                "mkdir -p ${FLATPAK_DEST}/share/metainfo",
+                "mkdir -p ${FLATPAK_DEST}/lib",
+                "install -Dm755 FunkinSource/Funkin-0.6.4/Funkin ${FLATPAK_DEST}/bin",
+                "cp -r FunkinSource/Funkin-0.6.4/assets FunkinSource/Funkin-0.6.4/manifest ${FLATPAK_DEST}/bin",
+                "cp -r FunkinSource/Funkin-0.6.4/*.md FunkinSource/Funkin-0.6.4/*.txt FunkinSource/Funkin-0.6.4/*.ndll ${FLATPAK_DEST}/bin/",
+                "cp -r lib ${FLATPAK_DEST}",
+                "cp io.github.Pucas01.FunkinFlatpak.desktop ${FLATPAK_DEST}/share/applications/",
+                "cp io.github.Pucas01.FunkinFlatpak.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/",
+                "cp io.github.Pucas01.FunkinFlatpak.appdata.xml ${FLATPAK_DEST}/share/metainfo"
+            ],
+            "sources": [
+                {
+                //Please set the latest github release under URL and the hash under well sha256
+                    "type": "archive",
+                    "url": "https://github.com/Pucas01/FunkinFlatpak/archive/refs/tags/LATESTRELEASE",
+                    "sha256":"SETHASHHERE"
+                },
+                 {
+                 //Please provide your own game files, the file structure should be FunkinSource/Funking-0.6.4/gamefiles
+                    "type": "dir",
+                    "path": "/your/path/here/FunkinBuilder/FunkinSourceFiles"
+                },
+                {
+                    "type": "file",
+                    "path": "io.github.Pucas01.FunkinFlatpak.desktop"
+                },
+                {
+                    "type": "file",
+                    "path": "io.github.Pucas01.FunkinFlatpak.png"
+                },
+                {
+                    "type": "file",
+                    "path": "io.github.Pucas01.FunkinFlatpak.appdata.xml"
+                }
+            ]
+        }
+    ],
+    "finish-args": [
+        "--share=network",
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--device=dri",
+        "--share=network",
+        "--share=ipc",
+        "--env=LD_LIBRARY_PATH=/app/bin:/app/lib"
+    ]
+}
