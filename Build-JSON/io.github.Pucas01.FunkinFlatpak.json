@@ -75,7 +75,7 @@
                 },
                  {
                     "type": "dir",
-                    "path": "/your/path/here/FunkinBuilder/FunkinSourceFiles"
+                    "path": "/your/path/here/"
                 },
                 {
                     "type": "file",
