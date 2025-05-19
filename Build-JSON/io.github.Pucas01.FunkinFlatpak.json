@@ -96,11 +96,12 @@
     ],
     "finish-args": [
         "--share=network",
-        "--socket=x11",
+        "--socket=wayland",
         "--socket=pulseaudio",
         "--device=dri",
         "--share=network",
         "--share=ipc",
-        "--env=LD_LIBRARY_PATH=/app/bin:/app/lib"
+        "--env=LD_LIBRARY_PATH=/app/bin:/app/lib",
+        "--env=LD_PRELOAD=/app/lib/libSDL2-2.0.so.0"
     ]
 }
