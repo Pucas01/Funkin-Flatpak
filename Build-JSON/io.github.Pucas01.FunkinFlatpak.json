@@ -70,7 +70,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/Twig6943/FunkinFlatpak/archive/refs/heads/main.zip"
+                    "url": "https://github.com/Twig6943/FunkinFlatpak/archive/refs/heads/main.zip",
+                    "sha256": "6df9b49c95370c295325b9c10ae3d188b258e975e6a606867f47638d49bac7aa6df9b49c95370c295325b9c10ae3d188b258e975e6a606867f47638d49bac7aa"
                 },
                  {
                     "type": "dir",
