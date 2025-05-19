@@ -12,7 +12,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y flatpak flatpak-builder git
-          flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+          flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
       - name: Clone FunkinFlatpak repo
         run: |
