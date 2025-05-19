@@ -59,9 +59,9 @@
                 "mkdir -p ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps",
                 "mkdir -p ${FLATPAK_DEST}/share/metainfo",
                 "mkdir -p ${FLATPAK_DEST}/lib",
-                "install -Dm755 FunkinSource/Funkin-0.6.4/Funkin ${FLATPAK_DEST}/bin",
-                "cp -r FunkinSource/Funkin-0.6.4/assets FunkinSource/Funkin-0.6.4/manifest ${FLATPAK_DEST}/bin",
-                "cp -r FunkinSource/Funkin-0.6.4/*.md FunkinSource/Funkin-0.6.4/*.txt FunkinSource/Funkin-0.6.4/*.ndll ${FLATPAK_DEST}/bin/",
+                "install -Dm755 Funkin-0.6.4/Funkin ${FLATPAK_DEST}/bin",
+                "cp -r Funkin-0.6.4/assets Funkin-0.6.4/manifest ${FLATPAK_DEST}/bin",
+                "cp -r Funkin-0.6.4/*.md Funkin-0.6.4/*.txt Funkin-0.6.4/*.ndll ${FLATPAK_DEST}/bin/",
                 "cp -r lib ${FLATPAK_DEST}",
                 "cp io.github.Pucas01.FunkinFlatpak.desktop ${FLATPAK_DEST}/share/applications/",
                 "cp io.github.Pucas01.FunkinFlatpak.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/",
@@ -69,13 +69,10 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/Twig6943/FunkinFlatpak/archive/refs/heads/main.zip",
-                    "sha256": "db356755af9516cfaea77d565e9f9907b947bcae3413da3df2dc091621d52c3c"
-                },
-                 {
-                    "type": "dir",
-                    "path": "~/work/FunkinFlatpak/FunkinFlatpak/FunkinFlatpak/Build-JSON/"
+                    "type": "git",
+                    "url": "https://github.com/ninjamuffin99/Funkin.git",
+                    "tag": "0.6.4",
+                    "commit": "HEAD"
                 },
                 {
                     "type": "file",
