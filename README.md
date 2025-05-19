@@ -4,7 +4,17 @@ A Flatpak package for the popular rhythm game Friday Night Funkin'.
 
 ## Installation
 
-**(Installation guide coming soon!)**
+1. **Add the remote**
+```bash
+flatpak remote-add --no-gpg-verify --user funkin-flatpak https://pucas01.github.io/FunkinFlatpak/
+```
+
+2. **install the flatpak**
+```bash
+flatpak install --user funkin-flatpak io.github.Pucas01.FunkinFlatpak
+```
+
+**and your done!**
 
 ## Self build Guide
 
