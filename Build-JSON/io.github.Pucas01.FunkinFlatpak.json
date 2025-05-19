@@ -71,7 +71,7 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/Twig6943/FunkinFlatpak/archive/refs/heads/main.zip",
-                    "sha256": "SKIP",
+                    "sha256": "SKIP"
                 },
                  {
                     "type": "dir",
