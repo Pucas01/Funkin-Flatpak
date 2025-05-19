@@ -21,6 +21,7 @@ jobs:
       - name: Build Flatpak
         run: |
           cd FunkinFlatpak/Build-JSON
+          pwd
           flatpak-builder --user --install-deps-from=flathub --force-clean --repo=.repo .build-dir io.github.Pucas01.FunkinFlatpak.json
           flatpak --user build-bundle .repo funkin.flatpak io.github.Pucas01.FunkinFlatpak --runtime-repo=https://flathub.org/repo/flathub.flatpakrepo
 
