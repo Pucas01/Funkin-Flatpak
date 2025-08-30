@@ -55,13 +55,14 @@
             "buildsystem": "simple",
             "build-commands": [
                 "mkdir -p ${FLATPAK_DEST}/bin",
+                "mkdir -p ${FLATPAK_DEST}/bin/mods",
                 "mkdir -p ${FLATPAK_DEST}/share/applications",
                 "mkdir -p ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps",
                 "mkdir -p ${FLATPAK_DEST}/share/metainfo",
                 "mkdir -p ${FLATPAK_DEST}/lib",
-                "install -Dm755 FunkinSource/Funkin-0.7.3/Funkin ${FLATPAK_DEST}/bin",
-                "cp -r FunkinSource/Funkin-0.7.3/assets FunkinSource/Funkin-0.7.3/manifest ${FLATPAK_DEST}/bin",
-                "cp -r FunkinSource/Funkin-0.7.3/*.md FunkinSource/Funkin-0.7.3/*.txt FunkinSource/Funkin-0.7.3/*.ndll ${FLATPAK_DEST}/bin/",
+                "install -Dm755 Funkin-0.7.3/Funkin ${FLATPAK_DEST}/bin",
+                "cp -r Funkin-0.7.3/assets Funkin-0.7.3/manifest ${FLATPAK_DEST}/bin",
+                "cp -r Funkin-0.7.3/*.md Funkin-0.7.3/*.txt Funkin-0.7.3/*.ndll ${FLATPAK_DEST}/bin/",
                 "cp -r lib ${FLATPAK_DEST}",
                 "cp io.github.Pucas01.FunkinFlatpak.desktop ${FLATPAK_DEST}/share/applications/",
                 "cp io.github.Pucas01.FunkinFlatpak.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/",
@@ -98,9 +99,10 @@
         "--socket=fallback-x11",
         "--socket=pulseaudio",
         "--device=dri",
-        "--share=network",
         "--share=ipc",
         "--env=LD_LIBRARY_PATH=/app/bin:/app/lib",
-        "--env=LD_PRELOAD=/app/lib/libSDL2-2.0.so.0"
+        "--env=LD_PRELOAD=/app/lib/libSDL2-2.0.so.0",
+        "--persist=mods",
+        "--filesystem=~/.var/app/io.github.Pucas01.FunkinFlatpak/mods:/app/bin/mods"
     ]
 }
