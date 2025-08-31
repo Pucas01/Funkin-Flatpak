@@ -58,18 +58,23 @@
     <content_attribute id="language-humor">intense</content_attribute>
     <content_attribute id="language-discrimination">mild</content_attribute>
   </content_rating>
-  <metadata_license>FSFAP</metadata_license>
   <launchable type="desktop-id">io.github.Pucas01.FunkinFlatpak.desktop</launchable>
   <releases>
-    <release version="0.7.3-1" date="2025-7-22">
+    <release version="0.7.3-2" date="2025-08-31" urgency="medium">
+      <url type="details">https://github.com/Pucas01/FunkinFlatpak</url>
+      <description>
+        <p>This update contains small metadata fixes and improvements to the Flatpak package description.</p>
+      </description>
+    </release>
+
+    <release version="0.7.3-1" date="2025-08-30">
       <url type="details">https://github.com/Pucas01/FunkinFlatpak</url>
       <description>
         <p>Fixed mod support, instructions on how to add mods can be found on Github</p>
       </description>
     </release>
-  </releases>
-    <releases>
-    <release version="0.7.3" date="2025-7-22">
+
+    <release version="0.7.3" date="2025-07-22">
       <url type="details">https://github.com/FunkinCrew/Funkin/releases/tag/v0.7.3</url>
       <description>
         <p>Unofficial Flatpak release of Friday Night Funkin' version 0.7.3</p>
