@@ -57,7 +57,7 @@ If you want to build the Flatpak yourself, follow these steps:
     You will need to replace the placeholder link in the JSON to the release corosponding to the flatpak and game version your building for, you will also need to add the hash, you can find the hash in the description of the release on github **(the line you will need to change is in the funkin module under sources around line 70)**.
 
     * **Self-Provided Game Files:** 
-    please download the game files corosponding to this flatpaks version from [itch.io](<https://ninja-muffin24.itch.io/funkin>) and set the path in the JSON the path to a folder with these sub folders Funkin-0.7.3/theactualgamefiles **(the line you will need to change is in the funkin module under sources around line 70)**, If official pre-built game files aren't readily available you will have to compile them yourself from the [Funkin' GitHub repository](<https://github.com/FunkinCrew/Funkin>).
+    please download the game files corosponding to this flatpaks version from [itch.io](<https://ninja-muffin24.itch.io/funkin>) and set the path in the JSON the path to a folder with these sub folders Funkin/theactualgamefiles **(the line you will need to change is in the funkin module under sources around line 70)**, If official pre-built game files aren't readily available you will have to compile them yourself from the [Funkin' GitHub repository](<https://github.com/FunkinCrew/Funkin>).
 
 5.  **Execute the Build Command:**
     Go back to your terminal and run the following `flatpak-builder` command:
