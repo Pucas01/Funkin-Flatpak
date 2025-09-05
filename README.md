@@ -26,7 +26,8 @@ Just put your mods in there and it should work!
 
 If you encounter any problems, please refer to the following common issues:
 
-**`The game is zoomed in :(`**
+**The game is zoomed in :(**
+
 This is happens when playing the game using wayland and haven a screen scale above 1, execute the following command to revert to X11, this will fix the issue.
 
 ```bash
