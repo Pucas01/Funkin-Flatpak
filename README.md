@@ -22,6 +22,17 @@ The mods folder is located at ~/.var/app/io.github.Pucas01.FunkinFlatpak/mods
 
 Just put your mods in there and it should work!
 
+## Common Issues
+
+If you encounter any problems, please refer to the following common issues:
+
+* **`The game is zoomed in :(`**
+This is happens when playing the game using wayland and haven a screen scale above 1, execute the following command to revert to X11, this will fix the issue.
+
+```bash
+flatpak override --nosocket=wayland io.github.Pucas01.FunkinFlatpak
+```
+
 ## .Flatpak Build Guide
 
 1. install the flatpak by either installing it via the remote in the above guide, if ive long abandoned this project you can build it yourself below
@@ -41,23 +52,14 @@ If you want to build the Flatpak yourself, follow these steps:
     Begin by downloading the source code directly from this repository.
 
 2.  **Navigate to the Build Configuration:**
-    Open your terminal and change the current directory to the `Build-JSON` folder within the downloaded source code.
+    Open your terminal and change the current directory to the `FunkinFlatpak` folder within the downloaded source code.
 
     ```bash
-    cd Build-JSON
+    cd FunkinFlatpak
     ```
 
-3.  **Edit the Build Manifest:**
-    Open the file `io.github.Pucas01.FunkinFlatpak.json` in your preferred text editor
-
-4.  **Specify the Game Source:**
-    Within the `io.github.Pucas01.FunkinFlatpak.json` file, you'll need to provide the link to the corosponding release and the location of your LOCAL Friday Night Funkin' game files:
-
-    * **Latest Release Link and Hash:** 
-    You will need to replace the placeholder link in the JSON to the release corosponding to the flatpak and game version your building for, you will also need to add the hash, you can find the hash in the description of the release on github **(the line you will need to change is in the funkin module under sources around line 70)**.
-
     * **Self-Provided Game Files:** 
-    please download the game files corosponding to this flatpaks version from [itch.io](<https://ninja-muffin24.itch.io/funkin>) and set the path in the JSON the path to a folder with these sub folders Funkin/theactualgamefiles **(the line you will need to change is in the funkin module under sources around line 70)**, If official pre-built game files aren't readily available you will have to compile them yourself from the [Funkin' GitHub repository](<https://github.com/FunkinCrew/Funkin>).
+    please download the game files corosponding to this flatpaks version from [itch.io](<https://ninja-muffin24.itch.io/funkin>) place said game files in the FunkinSource/Funkin folder, If official pre-built game files aren't readily available you will have to compile them yourself from the [Funkin' GitHub repository](<https://github.com/FunkinCrew/Funkin>).
 
 5.  **Execute the Build Command:**
     Go back to your terminal and run the following `flatpak-builder` command:
@@ -79,15 +81,6 @@ If you want to build the Flatpak yourself, follow these steps:
     flatpak run io.github.Pucas01.FunkinFlatpak
     ```
 
-## Common Issues
 
-If you encounter any problems during the build or installation process, please refer to the following common issues:
 
-* **`hash didn't match Error:`**
-    This error indicates that the checksum of the downloaded game files doesn't match the hash specified in the `io.github.Pucas01.FunkinFlatpak.json` file. To resolve this:
-    1.  Copy the hash value that the error message spits out in your terminal.
-    2.  Open the `io.github.Pucas01.FunkinFlatpak.json` file again.
-    3.  Locate the hash value you previously entered for the game files.
-    4.  Replace the old hash with the new hash you copied from the error message.
-    5.  Try running the `flatpak-builder` command again.
 

@@ -20,7 +20,7 @@
     <display_length compare="ge">768</display_length>
   </requires>
   <metadata_license>CC0-1.0</metadata_license>
-  <icon type="remote">funkin</icon>
+  <icon type="remote">https://github.com/Pucas01/FunkinFlatpak/blob/main/io.github.Pucas01.FunkinFlatpak.png?raw=true</icon>
   <screenshots>
     <screenshot type="default">
       <image>https://github.com/Pucas01/FunkinFlatpak/blob/main/Screenshots/Opening.png?raw=true</image>
@@ -60,6 +60,13 @@
   </content_rating>
   <launchable type="desktop-id">io.github.Pucas01.FunkinFlatpak.desktop</launchable>
   <releases>
+    <release version="0.7.4-1" date="2025-09-4">
+      <url type="details">https://github.com/FunkinCrew/Funkin/blob/main/CHANGELOG.md</url>
+      <description>
+        <p>Reuploaded version of Friday Night Funkin' 0.7.4 with minor fixes</p>
+      </description>
+    </release>
+  
     <release version="0.7.4" date="2025-09-1">
       <url type="details">https://github.com/FunkinCrew/Funkin/blob/main/CHANGELOG.md</url>
       <description>

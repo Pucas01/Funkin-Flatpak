@@ -70,13 +70,12 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/Pucas01/FunkinFlatpak/archive/refs/tags/LATESTRELEASE",
-                    "sha256":"SETHASHHERE"
-                },
-                 {
                     "type": "dir",
-                    "path": "/your/path/here/"
+                    "path": "FunkinSource"
+                },
+                                {
+                    "type": "dir",
+                    "path": "libraries"
                 },
                 {
                     "type": "file",
