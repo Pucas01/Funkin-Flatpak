@@ -102,6 +102,7 @@
         "--env=LD_LIBRARY_PATH=/app/bin:/app/lib",
         "--env=LD_PRELOAD=/app/lib/libSDL2-2.0.so.0",
         "--persist=mods",
+        "--filesystem=xdg-run/discord-ipc-0",
         "--filesystem=~/.var/app/io.github.Pucas01.FunkinFlatpak/mods:/app/bin/mods"
     ]
 }
