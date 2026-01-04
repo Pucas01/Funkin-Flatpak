@@ -60,21 +60,31 @@
   </content_rating>
   <launchable type="desktop-id">io.github.Pucas01.FunkinFlatpak.desktop</launchable>
   <releases>
-    <release version="0.7.5" date="2025-09-4">
+    <release version="0.8.0" date="2026-01-03">
+      <url type="details">https://github.com/FunkinCrew/Funkin/blob/main/CHANGELOG.md</url>
+      <description>
+        <p>Hey guys, Merry Christmas!! We ditched hanging out with Santa to work on a level themed around... K-Pop?? Huh!? We’re as surprised as you!</p>
+        <ul>
+          <li>Added a new playable song: SPAGHETTI (feat. j-hope of BTS) (Clean ver.)! Try it out from either Story Mode or the Freeplay Menu!</li>
+        </ul>
+        <p>Unofficial Flatpak release of Friday Night Funkin' version 0.8.0</p>
+      </description>
+    </release>
+    <release version="0.7.5" date="2025-09-04">
       <url type="details">https://github.com/FunkinCrew/Funkin/blob/main/CHANGELOG.md</url>
       <description>
         <p>Unofficial Flatpak release of Friday Night Funkin' version 0.7.5</p>
       </description>
     </release>
     
-    <release version="0.7.4-1" date="2025-09-4">
+    <release version="0.7.4-1" date="2025-09-04">
       <url type="details">https://github.com/FunkinCrew/Funkin/blob/main/CHANGELOG.md</url>
       <description>
         <p>Reuploaded version of Friday Night Funkin' 0.7.4 with minor fixes</p>
       </description>
     </release>
   
-    <release version="0.7.4" date="2025-09-1">
+    <release version="0.7.4" date="2025-09-01">
       <url type="details">https://github.com/FunkinCrew/Funkin/blob/main/CHANGELOG.md</url>
       <description>
         <p>Unofficial Flatpak release of Friday Night Funkin' version 0.7.4</p>
