@@ -14,7 +14,7 @@ flatpak remote-add --no-gpg-verify --user funkin-flatpak https://pucas01.github.
 flatpak install --user funkin-flatpak io.github.Pucas01.FunkinFlatpak
 ```
 
-**and your done!**
+**and you're done!**
 
 ## Mods
 
