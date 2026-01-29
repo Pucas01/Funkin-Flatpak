@@ -60,7 +60,13 @@
   </content_rating>
   <launchable type="desktop-id">io.github.Pucas01.FunkinFlatpak.desktop</launchable>
   <releases>
-        <release version="0.8.1" date="2026-01-04">
+    <release version="0.8.1-1" date="2026-01-29">
+      <url type="details">https://github.com/FunkinCrew/Funkin/blob/main/CHANGELOG.md</url>
+      <description>
+        <p>Flatpak specific fix, file pickers now work!</p>
+      </description>
+    </release>
+    <release version="0.8.1" date="2026-01-04">
       <url type="details">https://github.com/FunkinCrew/Funkin/blob/main/CHANGELOG.md</url>
       <description>
         <p>Unofficial Flatpak release of Friday Night Funkin' version 0.8.1</p>
