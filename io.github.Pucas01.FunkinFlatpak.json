@@ -79,6 +79,37 @@
             ]
         },
         {
+            "name": "sdl3",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DSDL_SHARED=ON",
+                "-DSDL_STATIC=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/libsdl-org/SDL/releases/download/release-3.4.0/SDL3-3.4.0.tar.gz",
+                    "sha256": "082cbf5f429e0d80820f68dc2b507a94d4cc1b4e70817b119bbb8ec6a69584b8"
+                }
+            ]
+        },
+        {
+            "name": "sdl2-compat",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DSDL2COMPAT_TESTS=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/libsdl-org/sdl2-compat/releases/download/release-2.32.62/sdl2-compat-2.32.62.tar.gz",
+                    "sha256": "23019a3b0825e2fd3411901df3e1ae24c595cd57e20a345509f77472bd9000e0"
+                }
+            ]
+        },
+        {
             "name": "funkin",
             "buildsystem": "simple",
             "build-commands": [
@@ -92,7 +123,6 @@
                 "install -Dm755 funkin-wrapper.sh ${FLATPAK_DEST}/bin/Funkin",
                 "cp -r Funkin/assets Funkin/manifest ${FLATPAK_DEST}/bin",
                 "cp -r Funkin/*.md Funkin/*.txt Funkin/*.ndll ${FLATPAK_DEST}/bin/",
-                "cp -r lib ${FLATPAK_DEST}",
                 "cp io.github.Pucas01.FunkinFlatpak.desktop ${FLATPAK_DEST}/share/applications/",
                 "cp io.github.Pucas01.FunkinFlatpak.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/",
                 "cp io.github.Pucas01.FunkinFlatpak.appdata.xml ${FLATPAK_DEST}/share/metainfo"
@@ -111,10 +141,6 @@
                 {
                     "type": "dir",
                     "path": "FunkinSource"
-                },
-                                {
-                    "type": "dir",
-                    "path": "libraries"
                 },
                 {
                     "type": "file",
@@ -142,7 +168,6 @@
         "--env=LD_PRELOAD=/app/lib/libSDL2-2.0.so.0",
         "--persist=mods",
         "--filesystem=xdg-run/discord-ipc-0",
-        "--filesystem=~/.var/app/io.github.Pucas01.FunkinFlatpak/mods:/app/bin/mods",
-        "--env=DISPLAY=:0"
+        "--filesystem=~/.var/app/io.github.Pucas01.FunkinFlatpak/mods:/app/bin/mods"
     ]
 }
