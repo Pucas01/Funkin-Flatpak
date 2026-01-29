@@ -63,8 +63,8 @@
     <release version="0.8.1-2" date="2026-01-29">
       <url type="details">https://github.com/FunkinCrew/Funkin/blob/main/CHANGELOG.md</url>
       <description>
-        <P>Breaking changes: The flatpak has now properly been renamed, ID has now changed</p>
-        <p>Flatpak specific fix, Backup folder now works!</p>
+        <p>Breaking changes: The flatpak has now properly been renamed, ID has now changed
+        Flatpak specific fix, Backup folder now works!</p>
       </description>
     </release>
     <release version="0.8.1-1" date="2026-01-29">
