@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>io.github.Pucas01.FunkinFlatpak</id>
+  <id>io.github.Pucas01.Funkin-Flatpak</id>
   <name>Friday Night Funkin'</name>
   <summary>Indie rhythm game developed by the Funkin' Crew (Unofficial).</summary>
   <description>
@@ -20,22 +20,22 @@
     <display_length compare="ge">768</display_length>
   </requires>
   <metadata_license>CC0-1.0</metadata_license>
-  <icon type="remote">https://github.com/Pucas01/FunkinFlatpak/blob/main/io.github.Pucas01.FunkinFlatpak.png?raw=true</icon>
+  <icon type="remote">https://raw.githubusercontent.com/Pucas01/Funkin-Flatpak/main/io.github.Pucas01.Funkin-Flatpak.png</icon>
   <screenshots>
     <screenshot type="default">
-      <image>https://github.com/Pucas01/FunkinFlatpak/blob/main/Screenshots/Opening.png?raw=true</image>
+      <image>https://raw.githubusercontent.com/Pucas01/Funkin-Flatpak/main/Screenshots/Opening.png</image>
       <description>Getting freaky on a friday night.</description>
     </screenshot>
     <screenshot>
-      <image>https://github.com/Pucas01/FunkinFlatpak/blob/main/Screenshots/Boyfriend.png?raw=true</image>
+      <image>https://raw.githubusercontent.com/Pucas01/Funkin-Flatpak/main/Screenshots/Boyfriend.png</image>
       <description>Battle your girlfriend’s dad with rhythm!.</description>
     </screenshot>
     <screenshot>
-      <image>https://github.com/Pucas01/FunkinFlatpak/blob/main/Screenshots/Pico.png?raw=true</image>
+      <image>https://raw.githubusercontent.com/Pucas01/Funkin-Flatpak/main/Screenshots/Pico.png</image>
       <description>Play as pico in his own week and remixes of songs.</description>
     </screenshot>
     <screenshot>
-      <image>https://github.com/Pucas01/FunkinFlatpak/blob/main/Screenshots/Remix.png?raw=true</image>
+      <image>https://raw.githubusercontent.com/Pucas01/Funkin-Flatpak/main/Screenshots/Remix.png</image>
       <description>Play remixes of songs with upgraded visuals.</description>
     </screenshot>
   </screenshots>
@@ -58,7 +58,7 @@
     <content_attribute id="language-humor">intense</content_attribute>
     <content_attribute id="language-discrimination">mild</content_attribute>
   </content_rating>
-  <launchable type="desktop-id">io.github.Pucas01.FunkinFlatpak.desktop</launchable>
+  <launchable type="desktop-id">io.github.Pucas01.Funkin-Flatpak.desktop</launchable>
   <releases>
     <release version="0.8.1-1" date="2026-01-29">
       <url type="details">https://github.com/FunkinCrew/Funkin/blob/main/CHANGELOG.md</url>
@@ -104,14 +104,14 @@
     </release>
     
     <release version="0.7.3-2" date="2025-08-31">
-      <url type="details">https://github.com/Pucas01/FunkinFlatpak</url>
+      <url type="details">https://github.com/Pucas01/Funkin-Flatpak</url>
       <description>
         <p>This update contains small metadata fixes and improvements to the Flatpak package description.</p>
       </description>
     </release>
 
     <release version="0.7.3-1" date="2025-08-30">
-      <url type="details">https://github.com/Pucas01/FunkinFlatpak</url>
+      <url type="details">https://github.com/Pucas01/Funkin-Flatpak</url>
       <description>
         <p>Fixed mod support, instructions on how to add mods can be found on Github</p>
       </description>

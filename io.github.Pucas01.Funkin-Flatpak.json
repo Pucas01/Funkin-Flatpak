@@ -1,5 +1,5 @@
 {
-    "id": "io.github.Pucas01.FunkinFlatpak",
+    "id": "io.github.Pucas01.Funkin-Flatpak",
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "24.08",
     "sdk": "org.freedesktop.Sdk",
@@ -123,9 +123,9 @@
                 "install -Dm755 funkin-wrapper.sh ${FLATPAK_DEST}/bin/Funkin",
                 "cp -r Funkin/assets Funkin/manifest ${FLATPAK_DEST}/bin",
                 "cp -r Funkin/*.md Funkin/*.txt Funkin/*.ndll ${FLATPAK_DEST}/bin/",
-                "cp io.github.Pucas01.FunkinFlatpak.desktop ${FLATPAK_DEST}/share/applications/",
-                "cp io.github.Pucas01.FunkinFlatpak.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/",
-                "cp io.github.Pucas01.FunkinFlatpak.appdata.xml ${FLATPAK_DEST}/share/metainfo"
+                "cp io.github.Pucas01.Funkin-Flatpak.desktop ${FLATPAK_DEST}/share/applications/",
+                "cp io.github.Pucas01.Funkin-Flatpak.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/",
+                "cp io.github.Pucas01.Funkin-Flatpak.appdata.xml ${FLATPAK_DEST}/share/metainfo"
             ],
             "sources": [
                 {
@@ -144,15 +144,15 @@
                 },
                 {
                     "type": "file",
-                    "path": "io.github.Pucas01.FunkinFlatpak.desktop"
+                    "path": "io.github.Pucas01.Funkin-Flatpak.desktop"
                 },
                 {
                     "type": "file",
-                    "path": "io.github.Pucas01.FunkinFlatpak.png"
+                    "path": "io.github.Pucas01.Funkin-Flatpak.png"
                 },
                 {
                     "type": "file",
-                    "path": "io.github.Pucas01.FunkinFlatpak.appdata.xml"
+                    "path": "io.github.Pucas01.Funkin-Flatpak.appdata.xml"
                 }
             ]
         }
@@ -168,6 +168,6 @@
         "--env=LD_PRELOAD=/app/lib/libSDL2-2.0.so.0",
         "--persist=mods",
         "--filesystem=xdg-run/discord-ipc-0",
-        "--filesystem=~/.var/app/io.github.Pucas01.FunkinFlatpak/mods:/app/bin/mods"
+        "--filesystem=~/.var/app/io.github.Pucas01.Funkin-Flatpak/mods:/app/bin/mods"
     ]
 }
