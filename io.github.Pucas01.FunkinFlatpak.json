@@ -51,6 +51,34 @@
             ]
         },
         {
+            "name": "zenity-wrapper",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm755 zenity.sh /app/bin/zenity"
+            ],
+            "sources": [
+                {
+                    "type": "script",
+                    "dest-filename": "zenity.sh",
+                    "commands": [
+                        "#!/usr/bin/env bash",
+                        "new_args=()",
+                        "for arg in \"$@\"; do",
+                        "    if [[ \"$arg\" == --file-filter=* ]]; then",
+                        "        prefix=\"--file-filter=\"",
+                        "        value=\"${arg#$prefix}\"",
+                        "        value_no_spaces=\"${value// /}\"",
+                        "        new_args+=(\"${prefix}${value_no_spaces}\")",
+                        "    else",
+                        "        new_args+=(\"$arg\")",
+                        "    fi",
+                        "done",
+                        "exec /usr/bin/zenity \"${new_args[@]}\""
+                    ]
+                }
+            ]
+        },
+        {
             "name": "funkin",
             "buildsystem": "simple",
             "build-commands": [
@@ -60,7 +88,8 @@
                 "mkdir -p ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps",
                 "mkdir -p ${FLATPAK_DEST}/share/metainfo",
                 "mkdir -p ${FLATPAK_DEST}/lib",
-                "install -Dm755 Funkin/Funkin ${FLATPAK_DEST}/bin",
+                "install -Dm755 Funkin/Funkin ${FLATPAK_DEST}/bin/Funkin.bin", 
+                "install -Dm755 funkin-wrapper.sh ${FLATPAK_DEST}/bin/Funkin",
                 "cp -r Funkin/assets Funkin/manifest ${FLATPAK_DEST}/bin",
                 "cp -r Funkin/*.md Funkin/*.txt Funkin/*.ndll ${FLATPAK_DEST}/bin/",
                 "cp -r lib ${FLATPAK_DEST}",
@@ -69,6 +98,16 @@
                 "cp io.github.Pucas01.FunkinFlatpak.appdata.xml ${FLATPAK_DEST}/share/metainfo"
             ],
             "sources": [
+                {
+                    "type": "script",
+                    "dest-filename": "funkin-wrapper.sh",
+                    "commands": [
+                        "#!/usr/bin/env bash",
+                        "# Zenity Wayland Fix",
+                        "export DISPLAY=:0",
+                        "exec /app/bin/Funkin.bin \"$@\""
+                    ]
+                },
                 {
                     "type": "dir",
                     "path": "FunkinSource"
@@ -103,6 +142,7 @@
         "--env=LD_PRELOAD=/app/lib/libSDL2-2.0.so.0",
         "--persist=mods",
         "--filesystem=xdg-run/discord-ipc-0",
-        "--filesystem=~/.var/app/io.github.Pucas01.FunkinFlatpak/mods:/app/bin/mods"
+        "--filesystem=~/.var/app/io.github.Pucas01.FunkinFlatpak/mods:/app/bin/mods",
+        "--env=DISPLAY=:0"
     ]
 }
