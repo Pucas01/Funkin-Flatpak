@@ -122,7 +122,7 @@
                 "install -Dm755 Funkin/Funkin ${FLATPAK_DEST}/bin/Funkin.bin", 
                 "install -Dm755 funkin-wrapper.sh ${FLATPAK_DEST}/bin/Funkin",
                 "cp -r Funkin/assets Funkin/manifest ${FLATPAK_DEST}/bin",
-                "cp -r Funkin/*.md Funkin/*.txt Funkin/*.ndll ${FLATPAK_DEST}/bin/",
+                "cp -r Funkin/*.so Funkin/*.md Funkin/*.txt Funkin/*.ndll ${FLATPAK_DEST}/bin/",
                 "cp io.github.Pucas01.Funkin-Flatpak.desktop ${FLATPAK_DEST}/share/applications/",
                 "cp io.github.Pucas01.Funkin-Flatpak.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/",
                 "cp io.github.Pucas01.Funkin-Flatpak.appdata.xml ${FLATPAK_DEST}/share/metainfo"
